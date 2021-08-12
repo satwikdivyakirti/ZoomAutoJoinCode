@@ -1,0 +1,18 @@
+#This code only works on python
+#Satwik Divyakirti
+
+import schedule
+import time
+import webbrowser
+
+def open_link(link):
+    webbrowser.open(link)
+
+def demo_meeting():
+    open_link('Zoom Link Goes Here')
+
+schedule.every().wednesday.at("The joining time goes here in 24 hours format").do(demo_meeting)
+
+while 1:
+    schedule.run_pending()
+    time.sleep(1)
